@@ -1,0 +1,25 @@
+// mixin to apply consitant borders and shadows throught the site/app
+@mixin container-border($shadow: false, $radius: true) {
+  border: $container-border;
+
+  @if $shadow {
+    box-shadow: $container-box-shadow;
+  } @else {
+    box-shadow: none;
+  }
+
+  @if $radius == false {
+    border-radius: 0;
+  } @else {
+    border-radius: $global-radius;
+  }
+}
+
+.container-divider-right {
+  border-bottom: $container-border;
+
+  @include breakpoint(medium) {
+    border-right: $container-border;
+    border-bottom: 0;
+  }
+}

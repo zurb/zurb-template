@@ -1,0 +1,22 @@
+$avatar-size: rem-calc(38) !default;
+$avatar-size-small: rem-calc(25) !default;
+$avatar-size-large: rem-calc(100) !default;
+
+@mixin avatar($height: $avatar-size, $width: $avatar-size, $radius: 50%) {
+  height: $height;
+  width: $width;
+  border-radius: $radius;
+}
+
+.avatar {
+  @include avatar($avatar-size, $avatar-size, 50%);
+  min-width: $avatar-size;
+}
+
+.avatar-small {
+  @include avatar(25px, 25px, 50%);
+}
+
+.avatar-large {
+  @include avatar(100px, 100px, 50%);
+}
