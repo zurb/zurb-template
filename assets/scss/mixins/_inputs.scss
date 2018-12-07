@@ -1,0 +1,34 @@
+@mixin all-inputs {
+  [type='color'],
+  [type='date'],
+  [type='datetime'],
+  [type='datetime-local'],
+  [type='email'],
+  [type='month'],
+  [type='number'],
+  [type='password'],
+  [type='search'],
+  [type='tel'],
+  [type='text'],
+  [type='time'],
+  [type='url'],
+  [type='week'],
+  input:not([type]),
+  textarea {
+    @content
+  }
+}
+
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}
+
+
+// example usage
+// @include placeholder {
+//   color: white;
+//   font-weight: 100;
+// }
