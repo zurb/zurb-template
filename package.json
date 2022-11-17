@@ -15,7 +15,7 @@
   "dependencies": {
     "foundation-sites": "^6.4.3",
     "motion-ui": "^1.2.3",
-    "nuxt": "^1.0.0"
+    "nuxt": "^3.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
